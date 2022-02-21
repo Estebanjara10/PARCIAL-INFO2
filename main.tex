@@ -1,9 +1,9 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
+\usepackage{ragged2e}
 \usepackage{graphicx}
 \graphicspath{ {images/} }
-\usepackage{ragged2e}
 \usepackage{url}
 
 
@@ -50,7 +50,7 @@ Desarrollar un sistema de comunicación entre maquinas que pasen la información
 \newline
 \textbf{Objetivo Específicos}
 
-\justify
+\justifying
 \begin{itemize}
 
     \item utilizar el circuito integrado 74HC595 de forma independiente con pulsadores o switches.
@@ -82,19 +82,20 @@ La figura 1 presenta un proceso donde al ser aplicada una pulsación, sucede que
 Con respecto a la figura 1 el PIN “latch” es utilizado para realizar una copia del DATA(Shift Register), que cada vez que este va recibiendo información, manda esos 8 bits al latch (Storage Register), si la salida se encuentra habilitada, los bits del latch son activados en los pin de salida (Output).
 
 
-\centering
+\begin{center}
 \includegraphics[scale=0.5]{figura1}
 imagen tomada de: https://lastminuteengineers.com/
+
+\end{center}
 \newpage
 
 A continuación se mostrará el paso a paso y la utilidad que se le dio a los siguientes ejemplos.\newline
 
-
+\begin{justify}
 \textbf{(1)Circuito 595 con pulsador:} \\
-\justify Se empleo un arduino, unas luces led, unas resistencias, un pequeño pulsador para probar el uso del reloj , la tierra (cable negro) y el positivo (cable rojo) se pegaran a la placa, sin el uso de estos dos no hara un correcto funcionamiento, ademas el uso de las salidas (cables azules) son usados para poder encender los leds, la entrada (cable verde) y el reloj de registro de desplazamiento (cable naranja) se utilizaron unidos al arduino, esto es debido a que con el uso de un pulsador, el voltaje se sobrepasaba, aunque con el uso de la bateria de 9V no era sufieciente, esto hacia que el circuito se quemara. Por otro lado, el reloj de salida, el que permite el ritmo de trabajo, es utilizado por medio de este pulsador, en este es necesario el uso de dos resistencia para llevar el control del voltaje y también el uso de un cable positivo, cada vez que se le presiona, este envía la señal y de esta forma permite llevar la información, esta es simulada con los leds encendidos.
-\newline
-\newline
-\newline
+ Se empleo un arduino, unas luces led, unas resistencias, un pequeño pulsador para probar el uso del reloj , la tierra (cable negro) y el positivo (cable rojo) se pegaran a la placa, sin el uso de estos dos no hara un correcto funcionamiento, ademas el uso de las salidas (cables azules) son usados para poder encender los leds, la entrada (cable verde) y el reloj de registro de desplazamiento (cable naranja) se utilizaron unidos al arduino, esto es debido a que con el uso de un pulsador, el voltaje se sobrepasaba, aunque con el uso de la bateria de 9V no era sufieciente, esto hacia que el circuito se quemara. Por otro lado, el reloj de salida, el que permite el ritmo de trabajo, es utilizado por medio de este pulsador, en este es necesario el uso de dos resistencia para llevar el control del voltaje y también el uso de un cable positivo, cada vez que se le presiona, este envía la señal y de esta forma permite llevar la información, esta es simulada con los leds encendidos.
+ \end{justify}
+
 \includegraphics[scale=0.5]{figura2}
 \centering
 \textbf{Apoyado en el anexo 1}
@@ -102,10 +103,12 @@ A continuación se mostrará el paso a paso y la utilidad que se le dio a los si
 \newline
 \newline
 
+\begin{justify}
 
 
-\textbf{(1)Circuito 595 sin pulsador:} \\
-\justify Se empleó un arduino, unas luces led, unas resistencias y una placa. La tierra (cable negro) y el positivo (cable rojo) se pegaran a la placa, sin el uso de estos dos no hara un correcto funcionamiento, ademas el uso de las salidas (cables azules) son usados para poder encender los leds, la entrada (cable verde), el reloj de registro de desplazamiento (cable naranja) y el reloj de salida(cable amarillo).Como muestra la imagen cada uno esta conectado al arduino y al 595, permitiendo un correcto funcionamiento y el voltaje adecuado, es importante tener en cuenta el lugar al que va colocado cada cable, de lo contrario podrian ocurrir errores como lo son una mala ejecucion o el daño del circuito 595..
+\textbf{(1)Circuito 595 sin pulsador:}\\
+Se empleó un arduino, unas luces led, unas resistencias y una placa. La tierra (cable negro) y el positivo (cable rojo) se pegaran a la placa, sin el uso de estos dos no hara un correcto funcionamiento, ademas el uso de las salidas (cables azules) son usados para poder encender los leds, la entrada (cable verde), el reloj de registro de desplazamiento (cable naranja) y el reloj de salida(cable amarillo).Como muestra la imagen cada uno esta conectado al arduino y al 595, permitiendo un correcto funcionamiento y el voltaje adecuado, es importante tener en cuenta el lugar al que va colocado cada cable, de lo contrario podrian ocurrir errores como lo son una mala ejecucion o el daño del circuito 595.
+\end{justify}
 \newline
 \newline
 \newline
@@ -117,7 +120,6 @@ A continuación se mostrará el paso a paso y la utilidad que se le dio a los si
 \newline
 
 \newpage
-\justify
 \section{Anexos}
 \label{Anexos}
 \textbf{(1)}
